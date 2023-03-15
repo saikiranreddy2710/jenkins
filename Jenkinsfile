@@ -10,8 +10,9 @@ pipeline {
                 steps {
                     sh '''
                        docker version
+                       docker build -t alpine .
                        docker compose version
-                       docker-compose --version
+                       docker compose --version
                        curl --version
                        git --version
                    '''
