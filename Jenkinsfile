@@ -4,6 +4,7 @@ pipeline {
             stage('verifytools') {
                 steps {
                     sh '''
+                       export PATH=$PATH:/usr/local/bin
                        docker version
                        docker compose version
                        docker-compose version
